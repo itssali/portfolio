@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ali Nasser - Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<script>
+    function scrollToSection(sectionId) {
+        document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+    }
+</script>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <img src="assets/pfp.jpeg" alt="Profile Picture" id="profile-picture">
+        <h1>Ali Nasser</h1>
+        <p class="title">Swift Dev / Singer & Songwriter</p>
+        <div class="social-links">
+            <a href="https://github.com/itssali" target="_blank"><img src="assets/github.png" alt="GitHub"></a>
+            <a href="https://stackoverflow.com/users/23612069/ali-nasser" target="_blank"><img src="assets/stack.png" alt="Stack Overflow"></a>
+            <a href="https://twitter.com/alijnxo" target="_blank"><img src="assets/twitter.png" alt="Twitter/X"></a>
+            <a href="https://www.linkedin.com/in/alinasser04/" target="_blank"><img src="assets/linkedin.png" alt="LinkedIn"></a>
+        </div>
+    
+        <!-- GitHub Contribution Graph -->
+        <div class="github-graph">
+            <img src="https://ghchart.rshah.org/itssali" alt="GitHub Contributions Graph">
+        </div>
+    
+        <!-- Header Navigation -->
+        <nav>
+            <a href="#about">About</a>
+            <a href="#projects">Projects/Skills</a>
+            <a href="#work-history">Work History</a>
+            <a href="#contact">Contact Me</a>
+            <a href="music-career.html">Music Career</a>
+            <a href="blog.html">Blog</a>
+        </nav>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>nothing much to say really :D        LOLLLLLLLL HADASHAFSHD</p>
+    </section>
+
+    <!-- Projects/Skills Section -->
+    <section id="projects">
+        <h2>Projects and Skills</h2>
+        <p>In Progress...</p>
+    </section>
+
+    <!-- Work History Section -->
+    <section id="work-history">
+        <h2>Work History</h2>
+        
+        <!-- Work History Items -->
+        <div class="job">
+            <h3>Full Stack Developer</h3>
+            <p><strong>Upwork · Freelance</strong></p>
+            <p><em>Nov 2023 - <span class="duration" data-start="2023-11">Calculating...</span> - Present </em></p>
+            <p>Program Creation and Python (Programming Language)</p>
+        </div>
+        
+        <div class="job">
+            <h3>Swift Developer</h3>
+            <p><strong>Infinite Isle · Self-employed</strong></p>
+            <p><em>Apr 2023 - <span class="duration" data-start="2023-04">Calculating...</span> - Present </em></p>
+            <p>Swift (Programming Language) and SwiftUI</p>
+        </div>
+    
+        <div class="job">
+            <h3>Discord Bot Developer</h3>
+            <p><strong>Discord · Self-employed</strong></p>
+            <p><em>Apr 2021 - <span class="duration" data-start="2021-04">Calculating...</span> - Present </em></p>
+            <p>Implemented ChatGPT into a discord bot with the ability of virtual memory, coin system, and interactive features.</p>
+            <p>Python (Programming Language)</p>
+        </div>
+        
+        <div class="job">
+            <h3>Chief Executive Officer</h3>
+            <p><strong>Infinite Isle · Self-employed</strong></p>
+            <p><em>Aug 2022 - Ended on March 2023</span></em></p>
+            <p>Business Strategy, Business Development and +3 skills</p>
+        </div>
+        
+        <div class="job">
+            <h3>Marketing Staff</h3>
+            <p><strong>Infinite Isle · Clothing & Accessories</strong></p>
+            <p><em>Aug 2022 - Ended on March 2023</span></em></p>
+            <p>Was able to achieve amazing results using Facebook ads and Meta ads etc., using strategic moves to get sales and boost website SEO's.</p>
+            <p>Marketing Management, Search Engine Optimization (SEO) and +2 skills</p>
+        </div>
+    
+        <!-- Education Section -->
+        <h2>Education</h2>
+        <div class="education-item centered">
+            <img src="assets/concordia.png" alt="Concordia University Logo">
+            <div>
+                <h3>Concordia University</h3>
+                <p>Bachelor of Engineering - BE, Computer Engineering</p>
+                <p><em>2022 - 2024</em></p>
+                <p>SwiftUI, Swift (Programming Language) and +2 skills</p>
+            </div>
+        </div>
+    
+        <div class="education-item centered">
+            <img src="assets/alrowad.png" alt="AlRowad International School Logo">
+            <div>
+                <h3>AlRowad International School</h3>
+                <p>IGCSE - O Level, AS and A-Level studies, Physics, Math, and Computer Science</p>
+                <p><em>Nov 2018 - May 2022</em></p>
+            </div>
+        </div>
+    
+        <div class="education-item centered">
+            <img src="assets/bau.png" alt="Beirut Arab University Logo">
+            <div>
+                <h3>Beirut Arab University (BAU)</h3>
+                <p>Bachelor of Science - BS, Computer Science</p>
+                <p><em>2024 - 2029 (Expected)</em></p>
+            </div>
+        </div>
+    
+        <!-- Certificates Section -->
+        <h2>Certificates</h2>
+        <div class="certificate-item centered">
+            <img src="assets/aff.png" alt="AFF IoT Logo">
+            <div>
+                <h3>AFF IoT 2019</h3>
+                <p>Completion of a full Arduino kit course.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+    
+            <button type="submit">Submit</button>
+        </form>
+        <p id="form-status"></p>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-social-links">
+            <a href="https://github.com/itssali" target="_blank"><img src="assets/github.png" alt="GitHub"></a>
+            <a href="https://stackoverflow.com/users/23612069/ali-nasser" target="_blank"><img src="assets/stack.png" alt="Stack Overflow"></a>
+            <a href="https://twitter.com/alijnxo" target="_blank"><img src="assets/twitter.png" alt="Twitter/X"></a>
+            <a href="https://www.linkedin.com/in/alinasser04/" target="_blank"><img src="assets/linkedin.png" alt="LinkedIn"></a>
+        </div>
+        <!-- Footer Navigation -->
+        <nav class="footer-nav">
+            <a href="#about">About</a>
+            <a href="#projects">Projects/Skills</a>
+            <a href="#work-history">Work History</a>
+            <a href="#contact">Contact Me</a>
+            <a href="music-career.html">Music Career</a>
+            <a href="blog.html">Blog</a>
+        </nav>
+        <p class="trademark">Ali Nasser™</p>
+    </footer>
+
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const durationElements = document.querySelectorAll(".duration");
+
+        durationElements.forEach(function(element) {
+            const startDate = new Date(element.getAttribute("data-start"));
+            const endDate = element.getAttribute("data-ended") ? new Date(element.getAttribute("data-ended")) : new Date();
+            
+            let totalMonths = (endDate.getFullYear() - startDate.getFullYear()) * 12 + (endDate.getMonth() - startDate.getMonth());
+            
+            const years = Math.floor(totalMonths / 12);
+            const months = totalMonths % 12;
+            
+            let durationText = "";
+            if (years > 0) {
+                durationText += `${years} yr${years > 1 ? 's' : ''} `;
+            }
+            if (months > 0 || years === 0) { // Ensure we display months even if there are no years
+                durationText += `${months} mo${months > 1 ? 's' : ''}`;
+            }
+            
+            element.textContent = durationText.trim(); // Update the span with the calculated duration
+        });
+    });
+</script>
+<script>
+    document.querySelectorAll('nav a, .footer-nav a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+
+        // Check if the href is a section link or a page link
+        if (href.startsWith('#')) {
+            e.preventDefault();
+
+            const targetId = href.substring(1);
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        }
+        // If it's a page link (e.g., 'music-career.html'), allow the default behavior
+    });
+});
+</script>
+</body>
+</html>
