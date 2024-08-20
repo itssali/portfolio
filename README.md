@@ -25,12 +25,12 @@ To run this project locally:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/itssali/myportfolio.git
+   git clone https://github.com/itssali/portfolio.git
    ```
 
 2. **Navigate to the project directory:**
    ```bash
-   cd myportfolio
+   cd portfolio
    ```
 
 3. **Open the `index.html` file in your preferred web browser:**
