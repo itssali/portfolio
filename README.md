@@ -51,4 +51,3 @@ This project is licensed under the [MIT License](LICENSE).
 - **GitHub:** [@itssali](https://github.com/itssali)
 - **Twitter/X:** [@alijnxo](https://twitter.com/alijnxo)
 - **LinkedIn:** [Ali Nasser](https://www.linkedin.com/in/alinasser04/)
-```
