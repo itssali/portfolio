@@ -51,9 +51,56 @@
     <!-- Projects/Skills Section -->
     <section id="projects">
         <h2>Projects and Skills</h2>
-        <p>In Progress...</p>
+        <div class="stats-container">
+            <div class="stat-box">
+                <h3 id="projects-count">12</h3>
+                <p>Projects Completed</p>
+            </div>
+            <div class="stat-box">
+                <h3 id="clients-count">8</h3>
+                <p>Clients Served</p>
+            </div>
+            <div class="stat-box">
+                <h3 id="coffee-count">0</h3>
+                <p>Cups of Coffee</p>
+            </div>
+        </div>
+    
+        <div class="skills-container">
+            <h3>Programming Languages & Skills</h3>
+            <ul class="skills-list">
+                <li>Python</li>
+                <li>Prolog</li>
+                <li>C++</li>
+                <li>C#</li>
+                <li>Java</li>
+                <li>JavaScript</li>
+                <li>HTML/CSS</li>
+                <li>Swift</li>
+                <li>Database fine-tuning and integration with OpenAI Chatbots</li>
+            </ul>
+        </div>
+    
+        <!-- Projects Section -->
+        <div class="project-container">
+            <div class="project">
+                <div class="project-content">
+                    <h3>OpenAI Fine-tuned Discord Chatbot Using Any Kind of Conversational Data</h3>
+                    <img src="assets/discordbot.jpg" alt="Discord Chatbot Project" class="project-img">
+                </div>
+            </div>
+    
+            <div class="project">
+                <div class="project-content">
+                    <h3>SwiftUI AI Macro Tracking iOS App Using Photos and a Chatbot</h3>
+                    <div class="project-img-group">
+                        <img src="assets/macro-app1.png" alt="Macro Tracking App Screenshot 1" class="project-img">
+                        <img src="assets/macro-app2.png" alt="Macro Tracking App Screenshot 2" class="project-img">
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-
     <!-- Work History Section -->
     <section id="work-history">
         <h2>Work History</h2>
@@ -176,53 +223,6 @@
     </footer>
 
 </body>
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const durationElements = document.querySelectorAll(".duration");
-
-        durationElements.forEach(function(element) {
-            const startDate = new Date(element.getAttribute("data-start"));
-            const endDate = element.getAttribute("data-ended") ? new Date(element.getAttribute("data-ended")) : new Date();
-            
-            let totalMonths = (endDate.getFullYear() - startDate.getFullYear()) * 12 + (endDate.getMonth() - startDate.getMonth());
-            
-            const years = Math.floor(totalMonths / 12);
-            const months = totalMonths % 12;
-            
-            let durationText = "";
-            if (years > 0) {
-                durationText += `${years} yr${years > 1 ? 's' : ''} `;
-            }
-            if (months > 0 || years === 0) { // Ensure we display months even if there are no years
-                durationText += `${months} mo${months > 1 ? 's' : ''}`;
-            }
-            
-            element.textContent = durationText.trim(); // Update the span with the calculated duration
-        });
-    });
-</script>
-<script>
-    document.querySelectorAll('nav a, .footer-nav a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        const href = this.getAttribute('href');
-
-        // Check if the href is a section link or a page link
-        if (href.startsWith('#')) {
-            e.preventDefault();
-
-            const targetId = href.substring(1);
-            const targetElement = document.getElementById(targetId);
-
-            if (targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop,
-                    behavior: 'smooth'
-                });
-            }
-        }
-        // If it's a page link (e.g., 'music-career.html'), allow the default behavior
-    });
-});
-</script>
+<script src="script.js"></script>
 </body>
 </html>
