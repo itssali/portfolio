@@ -237,41 +237,37 @@ nav a,
 }
 
 /* Hover Effect with Smooth Underline */
-nav a::after,
-.footer-nav a::after {
+nav a {
+    display: inline-block;
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 1em;
+    text-align: center;
+    text-decoration: none;
+    margin: 0 15px;
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #76ABAE;
+}
+
+nav a::after {
     content: '';
     position: absolute;
     width: 0;
-    height: 2px; /* Thickness of the underline */
-    display: block;
-    margin-top: 5px;
-    right: 0;
-    background: #76ABAE; /* Color of the underline */
-    transition: width 0.4s ease, right 0.4s ease; /* Smooth transition */
+    height: 2px;
+    background: #76ABAE;
+    left: 50%;
+    bottom: 0;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
 }
 
-nav a:hover::after,
-.footer-nav a:hover::after {
+nav a:hover::after {
     width: 100%;
-    right: 0;
-}
-
-nav a:hover::after,
-.footer-nav a:hover::after {
-    right: 0;
-    width: 100%;
-}
-
-nav a::after,
-.footer-nav a::after {
-    width: 0;
-    right: 0;
-}
-
-nav a:hover::after,
-.footer-nav a:hover::after {
-    width: 100%;
-    right: 0;
 }
 /* Ensure full-width and height for sections */
 section {
