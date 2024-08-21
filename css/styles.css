@@ -450,12 +450,6 @@ header, footer {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.project-img-group {
-    display: flex;
-    justify-content: space-between; /* Adjust spacing between images */
-    gap: 10px; /* Optional: Adjust the space between images */
-}
-
 .project-img-group img {
     width: calc(33.333% - 10px); /* Each image takes up 1/3 of the container width, with space for the gap */
     border-radius: 10px;
