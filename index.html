@@ -6,6 +6,9 @@
     <title>Ali Nasser - Portfolio</title>
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+    
 </head>
 <script>
     function scrollToSection(sectionId) {
@@ -16,6 +19,7 @@
 
     <!-- Header Section -->
     <header>
+        <div id="particles"></div> <!-- Add this line for the particles effect -->
         <img src="assets/pfp.jpeg" alt="Profile Picture" id="profile-picture">
         <h1>Ali</h1>
         <p class="title">Swift Dev / Singer & Songwriter</p>
@@ -25,12 +29,12 @@
             <a href="https://twitter.com/alijnxo" target="_blank"><img src="assets/twitter.png" alt="Twitter/X"></a>
             <a href="https://www.linkedin.com/in/alinasser04/" target="_blank"><img src="assets/linkedin.png" alt="LinkedIn"></a>
         </div>
-    
+        
         <!-- GitHub Contribution Graph -->
         <div class="github-graph">
             <img src="https://ghchart.rshah.org/itssali" alt="GitHub Contributions Graph">
         </div>
-    
+        
         <!-- Header Navigation -->
         <nav>
             <a href="#about">About</a>
@@ -146,6 +150,16 @@
     
         <!-- Education Section -->
         <h2>Education</h2>
+
+        <div class="education-item centered">
+            <img src="assets/bau.png" alt="Beirut Arab University Logo">
+            <div>
+                <h3>Beirut Arab University (BAU)</h3>
+                <p>Bachelor of Science - BS, Computer Science</p>
+                <p><em>2024 - 2029 (Expected)</em></p>
+            </div>
+        </div>
+
         <div class="education-item centered">
             <img src="assets/concordia.png" alt="Concordia University Logo">
             <div>
@@ -165,14 +179,7 @@
             </div>
         </div>
     
-        <div class="education-item centered">
-            <img src="assets/bau.png" alt="Beirut Arab University Logo">
-            <div>
-                <h3>Beirut Arab University (BAU)</h3>
-                <p>Bachelor of Science - BS, Computer Science</p>
-                <p><em>2024 - 2029 (Expected)</em></p>
-            </div>
-        </div>
+        
     
         <!-- Certificates Section -->
         <h2>Certificates</h2>
