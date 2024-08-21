@@ -1,0 +1,22 @@
+#posts-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.post {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post h1, .post h2, .post h3 {
+    color: #31363F;
+}
+
+.post p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
