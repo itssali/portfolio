@@ -6,13 +6,13 @@ on:
       - 'blogs/*.md'
 
 jobs:
-  update-posts-json:
+  update-blogs-json:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
     - name: Update blogs.json
       run: |
-        echo "[" > posts.json
+        echo "[" > blogs.json
         for file in blogs/*.md; do
           echo "\"$(basename $file)\"," >> blogs.json
         done

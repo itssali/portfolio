@@ -16,5 +16,5 @@ document.addEventListener('DOMContentLoaded', function () {
                     .catch(error => console.error('Error loading post:', error));
             });
         })
-        .catch(error => console.error('Error fetching posts.json:', error));
+        .catch(error => console.error('Error fetching blogs.json:', error));
 });
