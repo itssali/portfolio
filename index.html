@@ -199,20 +199,55 @@
     <!-- Contact Section -->
     <section id="contact">
         <h2>Contact Me</h2>
-        <form id="contact-form">
+        <form id="contact-form" onsubmit="submitForm(event)">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
     
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <label for="email">Your email: </p>(Not required if you don't want me to reach out to you):</label>
+            <input type="email" id="email" name="email">
     
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
+            <label for="message">Your message:</label>
+            <textarea name="message" id="message" rows="5" required></textarea>
     
-            <button type="submit">Submit</button>
+            <button type="submit">Send</button>
         </form>
         <p id="form-status"></p>
     </section>
+    
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    const form = event.target;
+    const formData = new FormData(form);
+
+    fetch("https://formspree.io/f/mdknpyer", {
+        method: 'POST',
+        body: formData,
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(response => {
+        if (response.ok) {
+            document.getElementById('form-status').textContent = "Your message has been sent successfully!";
+            form.reset(); // Clear the form fields
+        } else {
+            response.json().then(data => {
+                if (data.errors) {
+                    document.getElementById('form-status').textContent = data.errors.map(error => error.message).join(", ");
+                } else {
+                    document.getElementById('form-status').textContent = "Oops! There was a problem submitting your form.";
+                }
+            }).catch(() => {
+                document.getElementById('form-status').textContent = "Oops! There was a problem submitting your form.";
+            });
+        }
+    }).catch(error => {
+        document.getElementById('form-status').textContent = "Oops! There was a problem submitting your form.";
+        console.error("Form submission error:", error);
+    });
+});
+        </script>
 
     <!-- Footer Section -->
     <footer>

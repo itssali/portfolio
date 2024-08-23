@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 const postElement = document.createElement('div');
                 postElement.classList.add('post');
                 postElement.innerHTML = marked.parse(markdown);
-                postsContainer.appendChild(postElement);
+                postsContainer.insertBefore(postElement, postsContainer.firstChild); // Prepend the post
                 loadPost(index + 1); // Load the next post
             })
             .catch(error => {

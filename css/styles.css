@@ -1,15 +1,15 @@
 /* Importing the Poppins font */
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #EEEEEE;
-    color: #222831;
+    background-color: #525252; /* Updated background color */
+    color: #CA3E47; /* Updated text color */
     line-height: 1.6;
 }
 
 header {
     position: relative;
     width: 100%;
-    background-color: #31363F;
+    background-color: #313131; /* Updated header background color */
     color: #FFFFFF;
     overflow: hidden; /* Ensure particles don't spill over */
 }
@@ -32,7 +32,7 @@ header img, header h1, header p, .social-links, .github-graph, nav {
 header {
     text-align: center;
     padding: 40px 20px;
-    background-color: #31363F;
+    background-color: #313131; /* Updated header background color */
     color: #FFFFFF;
 }
 
@@ -45,7 +45,7 @@ header h1 {
 
 header .title {
     font-size: 1.2em;
-    color: #76ABAE;
+    color: #CA3E47; /* Updated title color */
     margin-top: -20px;
 }
 
@@ -70,19 +70,17 @@ header .title {
     transform: scale(1.1);
 }
 
-
-
 /* About Section */
 #about {
     padding: 60px 20px;
-    background-color: #FFFFFF;
+    background-color: #414141; /* Updated about section background color */
     text-align: center;
 }
 
 #about h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
-    color: #31363F;
+    color: #CA3E47; /* Updated heading color */
 }
 
 #about p {
@@ -94,7 +92,7 @@ header .title {
 /* Projects/Skills Section */
 #projects {
     padding: 60px 20px;
-    background-color: #76ABAE;
+    background-color: #CA3E47; /* Updated projects section background color */
     color: #FFFFFF;
     text-align: center;
 }
@@ -113,7 +111,7 @@ header .title {
 /* Work History Section */
 #work-history {
     padding: 60px 20px;
-    background-color: #31363F;
+    background-color: #313131; /* Updated work history section background color */
     color: #FFFFFF;
 }
 
@@ -121,13 +119,13 @@ header .title {
     font-size: 2.5em;
     margin-bottom: 40px;
     text-align: left;
-    color: #76ABAE;
+    color: #CA3E47; /* Updated heading color */
 }
 
 .job {
     margin-bottom: 30px;
     padding: 20px;
-    background-color: #222831;
+    background-color: #414141; /* Updated job background color */
     border-radius: 10px;
 }
 
@@ -142,7 +140,7 @@ header .title {
 }
 
 .job p strong {
-    color: #76ABAE;
+    color: #CA3E47; /* Updated strong text color */
 }
 
 .job p em {
@@ -153,14 +151,14 @@ header .title {
 /* Contact Section */
 #contact {
     padding: 60px 20px;
-    background-color: #FFFFFF;
+    background-color: #414141; /* Updated contact section background color */
     text-align: center;
 }
 
 #contact h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
-    color: #31363F;
+    color: #CA3E47; /* Updated heading color */
 }
 
 form {
@@ -173,19 +171,22 @@ form {
 label {
     font-size: 1.1em;
     margin-bottom: 5px;
-    color: #31363F;
+    color: #CA3E47; /* Updated label color */
 }
 
 input, textarea {
     margin-bottom: 20px;
     padding: 15px;
-    border: 2px solid #76ABAE;
-    border-radius: 10px;
+    border: 3px solid #CA3E47; /* Updated input border color */
+    border-radius: 20px;
     font-size: 1em;
+    font-family: 'Poppins', sans-serif; /* Ensures consistency with the rest of the site */
+    background-color: #525252; /* Updated input background color */
+    color: #FFFFFF; /* Updated input text color */
 }
 
 button[type="submit"] {
-    background-color: #76ABAE;
+    background-color: #CA3E47; /* Updated button background color */
     color: white;
     border: none;
     padding: 15px;
@@ -196,12 +197,12 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-    background-color: #5A9394;
+    background-color: #A32E3A; /* Updated button hover background color */
 }
 
 /* Footer */
 footer {
-    background-color: #31363F;
+    background-color: #313131; /* Updated footer background color */
     color: #FFFFFF;
     padding: 30px;
     text-align: center;
@@ -251,7 +252,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #76ABAE;
+    color: #CA3E47; /* Updated hover color */
 }
 
 nav a::after {
@@ -259,7 +260,7 @@ nav a::after {
     position: absolute;
     width: 0;
     height: 2px;
-    background: #76ABAE;
+    background: #CA3E47; /* Updated underline color */
     left: 50%;
     bottom: 0;
     transition: all 0.3s ease;
@@ -269,10 +270,9 @@ nav a::after {
 nav a:hover::after {
     width: 100%;
 }
+
 /* Ensure full-width and height for sections */
 section {
-
-    
     box-sizing: border-box; /* Ensures padding is included within the width and height */
 }
 
@@ -300,8 +300,6 @@ header, footer {
 
 .centered img {
     height: 120px;
-  
-    
 }
 
 .centered div {
@@ -310,18 +308,18 @@ header, footer {
 
 .centered h3 {
     font-size: 1.5em;
-    color: #FFFFFF; /* University names in white */
+    color: #FFFFFF; /* Updated university name color */
     margin-bottom: 5px;
 }
 
 .centered p {
     font-size: 1.1em;
-    color: #ffffff;
+    color: #FFFFFF; /* Updated paragraph color */
     margin: 3px 0;
 }
 
 .centered em {
-    color: #76ABAE;
+    color: #CA3E47; /* Updated emphasized text color */
     font-style: normal;
     font-weight: bold;
 }
@@ -331,7 +329,7 @@ header, footer {
     font-size: 2.5em;
     margin-bottom: 30px;
     color: #dadada;
-    border-bottom: 2px solid #76ABAE;
+    border-bottom: 2px solid #CA3E47; /* Updated border color */
     padding-bottom: 10px;
     text-align: center;
 }
@@ -358,7 +356,7 @@ header, footer {
 }
 
 .stat-box {
-    background-color: #31363F;
+    background-color: #313131; /* Updated stat box background color */
     color: white;
     padding: 20px;
     border-radius: 10px;
@@ -385,7 +383,7 @@ header, footer {
 .skills-container h3 {
     font-size: 2em;
     margin-bottom: 20px;
-    color: #31363F;
+    color: #CA3E47; /* Updated heading color */
 }
 
 .skills-list {
@@ -397,9 +395,9 @@ header, footer {
 
 .skills-list li {
     font-size: 1.2em;
-    color: #31363F;
+    color: #fdfdfd; /* Updated list item color */
     margin: 5px 0;
-    background-color: #eeeeee;
+    background-color: #525252; /* Updated background color */
     padding: 10px 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -418,7 +416,7 @@ header, footer {
 }
 
 .project {
-    background-color: #f4f4f4;
+    background-color: #525252; /* Updated project background color */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -435,7 +433,7 @@ header, footer {
 
 .project h3 {
     font-size: 1.8em;
-    color: #31363F;
+    color: #CA3E47; /* Updated project heading color */
     margin: 0;
     max-width: 60%;
 }
