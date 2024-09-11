@@ -1,0 +1,420 @@
+/* Resetting default browser styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* General Body Styling */
+body {
+    background-color: #171717; /* 171717 */
+    color: #EDEDED; /* EDEDED */
+    padding: 20px;
+    line-height: 1.6;
+    animation: fadeInAnimation ease 2s;
+}
+
+/* Header and Navigation */
+header {
+    text-align: center;
+    padding: 60px 20px; /* Increased padding for more spacing */
+    background-color: #313131;
+    color: #FFFFFF;
+    border-radius: 15px; /* Rounded corners */
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 66px;
+    margin-top: 20px; /* Added margin to separate from other elements */
+    background-color: #18181B;
+    border: 1px solid #27272A;
+    border-radius: 48px;
+}
+
+
+nav a {
+    font-size: 18px;
+    color: #EDEDED; /* EDEDED */
+    text-decoration: none;
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+    color: #DA0037; /* DA0037 */
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #DA0037; /* DA0037 */
+    left: 50%;
+    bottom: 0;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.social-links {
+    margin-top: 20px; /* Added margin to separate from nav and title */
+}
+
+.social-links a img {
+    width: 24px;
+    margin: 0 15px; /* Increased margin for more spacing */
+    transition: transform 0.3s ease;
+}
+
+.social-links a img:hover {
+    transform: scale(1.1);
+}
+
+
+.github-graph {
+    margin-top: 40px; /* Added more margin to create space between profile picture */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.github-graph img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+}
+
+/* Profile Picture */
+#profile-picture {
+    width: 150px; /* Adjusted size for better spacing */
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 30px; /* Added margin to separate from nav */
+    margin-bottom: 30px; /* Added margin to separate from the GitHub graph */
+}
+
+/* About Section */
+#about {
+    padding: 60px 42px;
+    background: #171717; /* 171717 */
+    border: 0.5px solid #444444; /* 444444 */
+    margin-top: 20px;
+    border-radius: 14px; /* Rounded corners */
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 36px;
+    color: #EDEDED; /* EDEDED */
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 20px;
+    color: #BDBDBD;
+}
+
+/* Projects/Skills Section */
+#projects {
+    margin-top: 20px;
+    padding: 40px 20px;
+    background-color: #DA0037; /* DA0037 */
+    color: #EDEDED; /* EDEDED */
+    text-align: center;
+    border-radius: 15px; /* Rounded corners */
+}
+
+.project-container {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Reduced gap */
+}
+
+.project {
+    background-color: #525252;
+    padding: 15px;
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.project-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.project h3 {
+    font-size: 1.4em; /* Reduced font size */
+    color: #EDEDED; /* EDEDED */
+}
+
+.project-img {
+    max-width: 25%; /* Reduced image size */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Skills Section */
+.skills-container {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.skills-container h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #EDEDED; /* EDEDED */
+}
+
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid */
+    gap: 20px;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 800px; /* Center skills container */
+}
+
+.skills-list li {
+    font-size: 1.1em;
+    color: #fdfdfd;
+    background-color: #444444; /* 444444 */
+    padding: 10px 20px;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/* Work History Section */
+#work-history {
+    margin-top: 20px;
+    padding: 60px 20px;
+    background-color: #313131;
+    color: #EDEDED; /* EDEDED */
+    text-align: center;
+    border-radius: 15px; /* Rounded corners */
+}
+
+.job {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #414141;
+    border-radius: 10px;
+}
+
+.job h3 {
+    font-size: 1.6em;
+    margin-bottom: 10px;
+    color: #DA0037; /* DA0037 */
+}
+
+.job p {
+    font-size: 1em;
+    margin: 5px 0;
+    color: #EDEDED; /* EDEDED */
+}
+
+.job p strong {
+    color: #DA0037; /* DA0037 */
+}
+
+/* Education Section */
+#education {
+    padding: 60px 20px;
+    background-color: #525252;
+    color: #EDEDED; /* EDEDED */
+    text-align: center;
+    border-radius: 15px; /* Rounded corners */
+}
+
+.centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.centered img {
+    height: 100px;
+    border-radius: 10px;
+}
+
+.centered div {
+    text-align: center;
+    padding: 10px;
+}
+
+.centered h3 {
+    font-size: 1.8em;
+    color: #EDEDED; /* EDEDED */
+    margin-bottom: 10px;
+}
+
+.centered p {
+    font-size: 1.1em;
+    color: #BDBDBD;
+    margin: 5px 0;
+}
+
+.centered em {
+    color: #DA0037; /* DA0037 */
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    background-color: #313131;
+    color: #EDEDED; /* EDEDED */
+    padding: 30px;
+    text-align: center;
+    border-radius: 15px; /* Rounded corners */
+}
+
+.footer-social-links a img {
+    width: 30px;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.footer-social-links a img:hover {
+    transform: scale(1.1);
+}
+
+footer .footer-nav {
+    margin-top: 20px;
+}
+
+footer .footer-nav a {
+    font-size: 18px;
+    color: #EDEDED; /* EDEDED */
+    text-decoration: none;
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+    color: #DA0037; /* DA0037 */
+}
+
+footer .footer-nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #DA0037; /* DA0037 */
+    left: 50%;
+    bottom: 0;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+footer .footer-nav a:hover::after {
+    width: 100%;
+}
+
+/* Contact Form */
+#contact {
+    margin-top: 20px;
+    padding: 60px 20px;
+    background-color: #444444; /* Updated background for modern look */
+    text-align: center;
+    border-radius: 15px; /* Rounded corners */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+label {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    color: #EDEDED; /* EDEDED */
+}
+
+input,
+textarea {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: none;
+    border-radius: 15px;
+    font-size: 1em;
+    background-color: #171717; /* Background */
+    color: #EDEDED; /* Text color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Modern box shadow */
+    resize: none; /* Disable textarea resizing */
+    transition: box-shadow 1s ease-in-out; /* Smooth transition */
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(218, 0, 55, 0); /* Initial shadow with transparency */
+    animation: focusFade 1s forwards; /* Apply animation */
+}
+
+/* Animation for fading in the focus box-shadow */
+@keyframes focusFade {
+    from {
+        box-shadow: 0 0 10px rgba(218, 0, 55, 0); /* No visible shadow */
+    }
+    to {
+        box-shadow: 0 0 10px rgba(218, 0, 55, 1); /* Full shadow */
+    }
+}
+
+button[type="submit"] {
+    background-color: #DA0037; /* DA0037 */
+    color: #EDEDED; /* EDEDED */
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 1.2em;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #A32E3A;
+}
+
+/* Animations */
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column-reverse;
+        padding: 30px;
+    }
+}
