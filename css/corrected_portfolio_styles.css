@@ -418,3 +418,39 @@ button[type="submit"]:hover {
         padding: 30px;
     }
 }
+
+/* Fix for pill-like nav bar items to fit text */
+.nav-bottom, nav {
+    display: flex;
+    justify-content: space-around; /* Space out the items */
+    align-items: center;
+    gap: 10px; /* Space between items */
+    flex-wrap: wrap; /* Ensure wrapping if too large */
+    padding: 10px; /* Padding for better spacing */
+}
+
+.nav-bottom a, nav a {
+    font-size: 18px;
+    padding: 10px 15px; /* Adjust padding to fit text */
+    white-space: nowrap; /* Prevent text wrapping */
+    text-align: center;
+    display: inline-block;
+    flex-grow: 1; /* Let the items grow evenly */
+    max-width: fit-content; /* Allow pill to adjust based on content */
+    color: #EDEDED; /* Text color */
+    transition: background-color 0.3s ease;
+}
+
+
+/* Responsive fix for smaller screens */
+@media (max-width: 600px) {
+    .nav-bottom a, nav a {
+        font-size: 14px;
+        padding: 8px 10px; /* Adjust padding on smaller screens */
+    }
+
+    .nav-bottom, nav {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: center;
+    }
+}
