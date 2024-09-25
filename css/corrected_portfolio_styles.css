@@ -8,150 +8,151 @@
 
 /* General Body Styling */
 body {
-    background-color: #171717; /* 171717 */
-    color: #EDEDED; /* EDEDED */
+    background-color: #171717;
+    color: #EDEDED;
     padding: 20px;
     line-height: 1.6;
-    animation: fadeInAnimation ease 2s;
+    animation: fadeInAnimation 2s ease;
 }
 
 /* Header and Navigation */
-header {
+header, footer {
     text-align: center;
-    padding: 60px 20px; /* Increased padding for more spacing */
+    padding: 30px;
     background-color: #313131;
     color: #FFFFFF;
-    border-radius: 15px; /* Rounded corners */
+    border-radius: 15px;
+    margin-top: 20px;
 }
 
-nav {
+/* Navigation */
+nav, .nav-bottom {
     display: flex;
-    gap: 20px;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
     padding: 0 66px;
-    margin-top: 20px; /* Added margin to separate from other elements */
     background-color: #18181B;
     border: 1px solid #27272A;
-    border-radius: 48px;
+    border-radius: 15px;
+    margin-top: 20px;
 }
 
-
-nav a {
+nav a, .nav-bottom a {
     font-size: 18px;
-    color: #EDEDED; /* EDEDED */
+    color: #EDEDED;
     text-decoration: none;
     position: relative;
-    padding: 5px 0;
-    transition: color 0.3s ease;
+    padding: 10px 15px;
+    white-space: nowrap;
+    display: inline-block;
+    transition: color 0.3s ease, background-color 0.3s ease;
 }
 
-nav a:hover,
-nav a.active {
-    color: #DA0037; /* DA0037 */
+nav a:hover, nav a.active, .nav-bottom a:hover {
+    color: #DA0037;
 }
 
-nav a::after {
+/* Underline Animation Fix */
+nav a::after, footer .footer-nav a::after {
     content: '';
     position: absolute;
     width: 0;
     height: 2px;
-    background: #DA0037; /* DA0037 */
+    background: #DA0037;
     left: 50%;
     bottom: 0;
-    transition: all 0.3s ease;
     transform: translateX(-50%);
+    transition: width 0.7s ease;
 }
 
-nav a:hover::after {
-    width: 100%;
+nav a:hover::after, footer .footer-nav a:hover::after {
+    width: 85%;
 }
 
-.social-links {
-    margin-top: 20px; /* Added margin to separate from nav and title */
+/* Social Links */
+.social-links, .footer-social-links {
+    margin-top: 20px;
 }
 
-.social-links a img {
+.social-links a img, .footer-social-links a img {
     width: 24px;
-    margin: 0 15px; /* Increased margin for more spacing */
-    transition: transform 0.3s ease;
+    margin: 0 15px;
+    transition: transform 0.8s ease;
 }
 
-.social-links a img:hover {
-    transform: scale(1.1);
+.social-links a img:hover, .footer-social-links a img:hover {
+    transform: scale(1.5);
 }
 
-
-.github-graph {
-    margin-top: 40px; /* Added more margin to create space between profile picture */
-    margin-bottom: 20px;
-    text-align: center;
+/* Profile Picture */
+#profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 30px auto;
 }
 
+/* GitHub Graph */
 .github-graph img {
     width: 100%;
     max-width: 600px;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 0 auto;
-}
-
-/* Profile Picture */
-#profile-picture {
-    width: 150px; /* Adjusted size for better spacing */
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-top: 30px; /* Added margin to separate from nav */
-    margin-bottom: 30px; /* Added margin to separate from the GitHub graph */
+    margin: 40px auto 20px;
 }
 
 /* About Section */
-#about {
-    padding: 60px 42px;
-    background: #171717; /* 171717 */
-    border: 0.5px solid #444444; /* 444444 */
-    margin-top: 20px;
-    border-radius: 14px; /* Rounded corners */
+#about, #projects, #work-history, #education {
+    padding: 20px 20px;
+    background-color: #171717;
+    border: 0.5px solid #444444;
+    border-radius: 15px;
     text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 25px;
 }
 
-#about h2 {
-    font-size: 36px;
-    color: #EDEDED; /* EDEDED */
+#about h2, .skills-container h3, .centered h3, .job h3 {
+    font-size: 24px;
+    color: #EDEDED;
     margin-bottom: 20px;
 }
 
-#about p {
+#about p, .job p, .centered p {
     font-size: 20px;
     color: #BDBDBD;
 }
 
-/* Projects/Skills Section */
-#projects {
-    margin-top: 20px;
-    padding: 40px 20px;
-    background-color: #DA0037; /* DA0037 */
-    color: #EDEDED; /* EDEDED */
+#contact {
+    padding: 60px 20px;
+    background-color: #171717;
+    border: 0.5px solid #444444;
+    border-radius: 15px;
     text-align: center;
-    border-radius: 15px; /* Rounded corners */
+    margin-top: 20px;
+    font-size: 15px;
 }
 
+
+/* Projects Section */
 .project-container {
     margin-top: 40px;
     display: flex;
     flex-direction: column;
-    gap: 20px; /* Reduced gap */
+    gap: 30px;
+    font-size: 25px;
 }
 
 .project {
     background-color: #525252;
     padding: 15px;
-    border-radius: 15px; /* Rounded corners */
+    border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
-    align-items: center;
     justify-content: space-between;
 }
 
@@ -162,12 +163,11 @@ nav a:hover::after {
 }
 
 .project h3 {
-    font-size: 1.4em; /* Reduced font size */
-    color: #EDEDED; /* EDEDED */
+    font-size: 1.4em;
 }
 
 .project-img {
-    max-width: 25%; /* Reduced image size */
+    max-width: 25%;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -175,173 +175,48 @@ nav a:hover::after {
 /* Skills Section */
 .skills-container {
     margin-top: 40px;
-    text-align: center;
-}
-
-.skills-container h3 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: #EDEDED; /* EDEDED */
 }
 
 .skills-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 20px;
-    padding: 0;
+    max-width: 800px;
     margin: 0 auto;
-    max-width: 800px; /* Center skills container */
 }
 
 .skills-list li {
-    font-size: 1.1em;
-    color: #fdfdfd;
-    background-color: #444444; /* 444444 */
+    background-color: #444444;
     padding: 10px 20px;
     border-radius: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: #fdfdfd;
     transition: transform 0.3s ease;
 }
 
 /* Work History Section */
-#work-history {
-    margin-top: 20px;
-    padding: 60px 20px;
-    background-color: #313131;
-    color: #EDEDED; /* EDEDED */
-    text-align: center;
-    border-radius: 15px; /* Rounded corners */
-}
-
 .job {
     margin-bottom: 30px;
-    padding: 20px;
     background-color: #414141;
+    padding: 20px;
     border-radius: 10px;
 }
 
-.job h3 {
-    font-size: 1.6em;
-    margin-bottom: 10px;
-    color: #DA0037; /* DA0037 */
-}
-
-.job p {
-    font-size: 1em;
-    margin: 5px 0;
-    color: #EDEDED; /* EDEDED */
-}
-
 .job p strong {
-    color: #DA0037; /* DA0037 */
+    color: #DA0037;
 }
 
 /* Education Section */
-#education {
-    padding: 60px 20px;
-    background-color: #525252;
-    color: #EDEDED; /* EDEDED */
-    text-align: center;
-    border-radius: 15px; /* Rounded corners */
-}
-
-.centered {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 30px;
-}
-
 .centered img {
     height: 100px;
     border-radius: 10px;
 }
 
-.centered div {
-    text-align: center;
-    padding: 10px;
-}
-
-.centered h3 {
-    font-size: 1.8em;
-    color: #EDEDED; /* EDEDED */
-    margin-bottom: 10px;
-}
-
-.centered p {
-    font-size: 1.1em;
-    color: #BDBDBD;
-    margin: 5px 0;
-}
-
 .centered em {
-    color: #DA0037; /* DA0037 */
+    color: #DA0037;
     font-weight: bold;
 }
 
-/* Footer */
-footer {
-    margin-top: 20px;
-    background-color: #313131;
-    color: #EDEDED; /* EDEDED */
-    padding: 30px;
-    text-align: center;
-    border-radius: 15px; /* Rounded corners */
-}
-
-.footer-social-links a img {
-    width: 30px;
-    margin: 0 10px;
-    transition: transform 0.3s ease;
-}
-
-.footer-social-links a img:hover {
-    transform: scale(1.1);
-}
-
-footer .footer-nav {
-    margin-top: 20px;
-}
-
-footer .footer-nav a {
-    font-size: 18px;
-    color: #EDEDED; /* EDEDED */
-    text-decoration: none;
-    position: relative;
-    padding: 5px 0;
-    transition: color 0.3s ease;
-}
-
-nav a:hover,
-nav a.active {
-    color: #DA0037; /* DA0037 */
-}
-
-footer .footer-nav a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    background: #DA0037; /* DA0037 */
-    left: 50%;
-    bottom: 0;
-    transition: all 0.3s ease;
-    transform: translateX(-50%);
-}
-
-footer .footer-nav a:hover::after {
-    width: 100%;
-}
-
 /* Contact Form */
-#contact {
-    margin-top: 20px;
-    padding: 60px 20px;
-    background-color: #444444; /* Updated background for modern look */
-    text-align: center;
-    border-radius: 15px; /* Rounded corners */
-}
-
 form {
     display: flex;
     flex-direction: column;
@@ -352,48 +227,35 @@ form {
 label {
     font-size: 1.1em;
     margin-bottom: 5px;
-    color: #EDEDED; /* EDEDED */
+    color: #EDEDED;
 }
 
-input,
-textarea {
+input, textarea {
     margin-bottom: 20px;
     padding: 15px;
     border: none;
     border-radius: 15px;
     font-size: 1em;
-    background-color: #171717; /* Background */
-    color: #EDEDED; /* Text color */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Modern box shadow */
-    resize: none; /* Disable textarea resizing */
-    transition: box-shadow 1s ease-in-out; /* Smooth transition */
+    background-color: #171717;
+    color: #ffffff;
+    box-shadow: 0 4px 8px rgba(128, 128, 128, 0.1);
+    resize: none;
+    transition: box-shadow 0.4s ease-in-out;
 }
 
-input:focus,
-textarea:focus {
+input:focus, textarea:focus {
     outline: none;
-    box-shadow: 0 0 10px rgba(218, 0, 55, 0); /* Initial shadow with transparency */
-    animation: focusFade 1s forwards; /* Apply animation */
-}
-
-/* Animation for fading in the focus box-shadow */
-@keyframes focusFade {
-    from {
-        box-shadow: 0 0 10px rgba(218, 0, 55, 0); /* No visible shadow */
-    }
-    to {
-        box-shadow: 0 0 10px rgba(218, 0, 55, 1); /* Full shadow */
-    }
+    box-shadow: 0 0 10px rgba(218, 0, 55, 0.5);
 }
 
 button[type="submit"] {
-    background-color: #DA0037; /* DA0037 */
-    color: #EDEDED; /* EDEDED */
-    border: none;
+    background-color: #DA0037;
+    color: #EDEDED;
     padding: 15px;
-    cursor: pointer;
+    border: none;
     font-size: 1.2em;
     border-radius: 50px;
+    cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
@@ -403,54 +265,19 @@ button[type="submit"]:hover {
 
 /* Animations */
 @keyframes fadeInAnimation {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
-/* Responsive design adjustments */
+/* Responsive Design */
 @media (max-width: 768px) {
-    .about {
-        flex-direction: column-reverse;
-        padding: 30px;
+    nav, .nav-bottom {
+        flex-direction: column;
+        padding: 10px;
     }
-}
 
-/* Fix for pill-like nav bar items to fit text */
-.nav-bottom, nav {
-    display: flex;
-    justify-content: space-around; /* Space out the items */
-    align-items: center;
-    gap: 10px; /* Space between items */
-    flex-wrap: wrap; /* Ensure wrapping if too large */
-    padding: 10px; /* Padding for better spacing */
-}
-
-.nav-bottom a, nav a {
-    font-size: 18px;
-    padding: 10px 15px; /* Adjust padding to fit text */
-    white-space: nowrap; /* Prevent text wrapping */
-    text-align: center;
-    display: inline-block;
-    flex-grow: 1; /* Let the items grow evenly */
-    max-width: fit-content; /* Allow pill to adjust based on content */
-    color: #EDEDED; /* Text color */
-    transition: background-color 0.3s ease;
-}
-
-
-/* Responsive fix for smaller screens */
-@media (max-width: 600px) {
     .nav-bottom a, nav a {
         font-size: 14px;
-        padding: 8px 10px; /* Adjust padding on smaller screens */
-    }
-
-    .nav-bottom, nav {
-        flex-direction: column; /* Stack items vertically on smaller screens */
-        align-items: center;
+        padding: 8px 10px;
     }
 }

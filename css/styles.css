@@ -247,7 +247,7 @@ nav a {
     text-decoration: none;
     margin: 0 15px;
     position: relative;
-    padding: 5px 0;
+    padding: 0;
     transition: color 0.3s ease;
 }
 
@@ -260,7 +260,7 @@ nav a::after {
     position: absolute;
     width: 0;
     height: 2px;
-    background: #CA3E47; /* Updated underline color */
+    background: #CA3E47; /* This is the underline color */
     left: 50%;
     bottom: 0;
     transition: all 0.3s ease;
@@ -268,7 +268,7 @@ nav a::after {
 }
 
 nav a:hover::after {
-    width: 100%;
+    width: 100%; /* This triggers the full-width animation */
 }
 
 /* Ensure full-width and height for sections */
