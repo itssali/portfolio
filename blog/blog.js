@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let postIndex = 1;
 
     function loadPost(index) {
-        const fileName = `blogs/post${index}.md`;
+        const fileName = `/blog posts/post${index}.md`;
         fetch(fileName)
             .then(response => {
                 if (response.ok) {
